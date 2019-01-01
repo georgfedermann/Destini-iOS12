@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!         // Has TAG = 1
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
     // TODO Step 5: Initialise instance variables here
     let storyLibrary:StoryLibrary = StoryLibrary();
@@ -22,22 +23,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startStory();
         updateView();
         
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
         
     }
     
-    
     // User presses one of the buttons
     @IBAction func buttonPressed(_ sender: UIButton) {
         currentState = storyStatemachine(from:currentState, edge:sender.tag);
         updateView();
-        // TODO Step 4: Write an IF-Statement to update the views
-        
-        // TODO Step 6: Modify the IF-Statement to complete the story
-        
-        
+    }
+    
+    @IBAction func restartButtonPressed(_ sender: UIButton) {
+        startStory();
+        updateView();
+    }
+    
+    func startStory(){
+        currentState = 1;
+//        restartButton.isHidden = true;
     }
     
     func updateView(){
@@ -46,11 +52,15 @@ class ViewController: UIViewController {
         } else {
             storyTextView.text = storyLibrary.story["story\(currentState)"];
             if(hasStatusQuestions(statusNumber:currentState)){
+                topButton.isHidden = false;
+                bottomButton.isHidden = false;
+                restartButton.isHidden = true;
                 topButton.setTitle(storyLibrary.story["answer\(currentState)a"], for: UIControl.State.normal);
                 bottomButton.setTitle(storyLibrary.story["answer\(currentState)b"], for: UIControl.State.normal);
             } else {
                 topButton.isHidden = true;
                 bottomButton.isHidden = true;
+                restartButton.isHidden = false;
             }
         }
     }
