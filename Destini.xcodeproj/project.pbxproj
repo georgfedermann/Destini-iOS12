@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56EB7FEA21DBC2FE003063C6 /* StoryLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EB7FE921DBC2FE003063C6 /* StoryLibrary.swift */; };
 		AD6F1CCE20EBD3FC00198C34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD6F1CCD20EBD3FC00198C34 /* README.md */; };
 		EBB1C7411B9633A60011F5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */; };
 		EBB1C7431B9633A60011F5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1C7421B9633A60011F5C3 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56EB7FE921DBC2FE003063C6 /* StoryLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryLibrary.swift; sourceTree = "<group>"; };
 		AD6F1CCD20EBD3FC00198C34 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBB1C73B1B9633A60011F5C3 /* Destini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Destini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1C73F1B9633A60011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56EB7FE821DBC2E9003063C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56EB7FE921DBC2FE003063C6 /* StoryLibrary.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EBB1C7321B9633A60011F5C3 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +67,7 @@
 		EBB1C73D1B9633A60011F5C3 /* Destini */ = {
 			isa = PBXGroup;
 			children = (
+				56EB7FE821DBC2E9003063C6 /* Model */,
 				EBB1C7401B9633A60011F5C3 /* AppDelegate.swift */,
 				EBB1C7421B9633A60011F5C3 /* ViewController.swift */,
 				EBB1C7441B9633A60011F5C3 /* Main.storyboard */,
@@ -149,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EB7FEA21DBC2FE003063C6 /* StoryLibrary.swift in Sources */,
 				EBB1C7431B9633A60011F5C3 /* ViewController.swift in Sources */,
 				EBB1C7411B9633A60011F5C3 /* AppDelegate.swift in Sources */,
 			);
