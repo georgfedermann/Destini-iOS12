@@ -11,3 +11,5 @@ DerivedData/
 ## Various settings
 xcuserdata
 
+.DS_Store
+
